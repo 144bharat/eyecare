@@ -1,0 +1,8 @@
+.bg_green {
+    background-image: linear-gradient(to right, rgb(24, 69, 83), seagreen);
+}
+
+.iconcrop {
+    -webkit-clip-path: inset(9% 9% 8% 11%);
+    clip-path: inset(9% 9% 8% 11%);
+}

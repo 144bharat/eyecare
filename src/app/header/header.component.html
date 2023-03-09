@@ -1,1 +1,74 @@
-<p>header works!</p>
+<header>
+    <div class="text-white h-20 bg_green w-screen rounded overflow-hidden shadow-lg font-sans flex flex-row gap-x-2">
+        <p>Have any question?</p>
+        <div class="md:w-4/5 lg:w-4/5 sm:w-1/5 w-2/5 flex"><a href="tel:7982546858"><img
+                    src="../../assets/images/callicon.png" class="w-3/6" /></a><a
+                href="mailto:144bharatgautam@gmail.com"><img src="../../assets/images/mailicon.png"
+                    class="w-2/6 mt-0.5 mx-0" /></a></div>
+        <div class="md:w-4/5 lg:w-1/5 sm:w-1/5 w-2/5 flex"><a href="#"><img src="../../assets/images/githubicon.png"
+                    class="w-4/6" /></a><a href="#"><img src="../../assets/images/youtubeicon.png"
+                    class="w-4/6" /></a><a href="#"><img src="../../assets/images/linkedinicon.png" class="w-4/6" /></a>
+        </div>
+    </div>
+    <!-- <nav class="mt-8"> -->
+    <!-- <ul>
+            <li><img src="../../assets/images/myeyecare.png" class="w-1/6 rounded overflow-hidden shadow-lg"/></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+
+
+
+
+
+
+    <nav class="
+          flex flex-wrap
+          items-center
+          justify-between
+          w-full
+          py-4
+          md:py-0
+          px-4
+          text-lg text-gray-700
+          bg-white
+        ">
+        <div>
+            <a href="#">
+                <img src="../../assets/images/myeyecare.png" class="w-1/6 rounded shadow-lg" />
+            </a>
+        </div>
+
+        <span (click)="runtoggle(#menu-button.value)"><svg xmlns="http://www.w3.org/2000/svg" id="menu-button"
+                class="h-6 w-6 cursor-pointer md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </span>
+        <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+            <ul class="
+              pt-4
+              text-base text-gray-700
+              md:flex
+              md:justify-between 
+              md:pt-0">
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Features</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Pricing</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Customers</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Blog</a>
+                </li>
+                <li>
+                    <a class="md:p-4 py-2 block hover:text-purple-400 text-purple-500" href="#">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

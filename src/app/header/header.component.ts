@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+toggle='inline';
+runtoggle(data:string)
+{
+  if(this.toggle==="inline")
+  {
+    this.toggle="none";
+  }else{
+    this.toggle="none";
+  }
+}
 }
