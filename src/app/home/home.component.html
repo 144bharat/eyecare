@@ -21,7 +21,6 @@
             <input type="date" class=" rounded-lg" ngModel name="selected_date" #appointment="ngModel" required />
         </div>
     </div>
-<button type="submit"
-    class="float-right mx-32 my-8 bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-blue-500 rounded">Next
+<button type="submit" [disabled]="step1.invalid" class="float-right mx-32 my-8 bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-blue-500 rounded">Next
 </button>
 </form>
