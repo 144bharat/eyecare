@@ -1,25 +1,24 @@
-<form #step1="ngForm" (ngSubmit)="getForm(step1.value)">
+<form #step1="ngForm" (ngSubmit)="getForm(step1)">
     <div
-        class="m-auto w-4/5 bg_green mt-4 grid lg:grid-cols-3 lg:grid-rows-2 md:grid-rows-3 sm:grid-rows-3 gap-4 rounded-lg">
+        class="m-auto w-4/5 bg_green mt-4 grid lg:grid-cols-3 lg:grid-rows-2 md:grid-rows-3 sm:grid-rows-3 gap-4 rounded-lg lg:pt-10">
         <div class="1 grid grid-rows-2 gap-2 m-2 mt-16">
             <p class="font-bold text-white text-lg">Select Speciality/Doctor</p>
-            <select class=" rounded-lg" ngModel>
-                <option *ngFor="let doctor of doctorArr">{{doctor}}</option>
+            <select class=" rounded-lg" ngModel name="selected_doctor">
+                <option *ngFor="let doctor of doctorArr" class="text-xs">{{doctor}}</option>
             </select>
         </div>
         <div class=" grid grid-rows-2 gap-2 m-2 mt-16">
             <p class="font-bold text-white text-lg">Select Hospital</p>
-            <select class=" rounded-lg" ngModel>
-                <option *ngFor="let hospital of hospitalArr" [value]="hospital">{{hospital}}</option>
+            <select class=" rounded-lg" ngModel name="selected_hospital">
+                <option *ngFor="let hospital of hospitalArr" [value]="hospital" class="text-xs">{{hospital}}</option>
             </select>
         </div>
         <div class="3 grid grid-rows-2 gap-2 m-2 mt-16">
             <p class="font-bold text-white text-lg">Appointment Date</p>
-            <select class=" rounded-lg" ngModel>
-                <option></option>
-            </select>
+            <input type="date" class=" rounded-lg" ngModel name="selected_date" />
         </div>
     </div>
-    <button type="submit"
-        class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Next</button>
+<button type="submit"
+    class="float-right mx-32 my-8 bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-blue-500 rounded">Next
+</button>
 </form>
