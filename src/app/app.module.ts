@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BookingComponent } from './booking/booking.component';
+import { NoPageComponent } from './no-page/no-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    BookingComponent
+    BookingComponent,
+    NoPageComponent
   ],
   imports: [
     BrowserModule,
