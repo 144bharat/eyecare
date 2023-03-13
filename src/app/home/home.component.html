@@ -4,21 +4,33 @@
         <div class="1 grid grid-rows-2 gap-2 m-2 mt-16">
             <p class="font-bold text-white text-lg">Select Speciality/Doctor</p>
             <small *ngIf="doctor.invalid && doctor.touched" class="error">Doctor Selection is Required.</small>
-            <select class=" rounded-lg" ngModel name="selected_doctor" #doctor="ngModel" required>
+            <select class=" rounded-lg h-6 md:w-3/5 lg:w-full" ngModel name="selected_doctor" #doctor="ngModel" required>
                 <option *ngFor="let doctor of doctorArr" class="text-xs">{{doctor}}</option>
             </select>
         </div>
         <div class=" grid grid-rows-2 gap-2 m-2 mt-16">
             <p class="font-bold text-white text-lg">Select Hospital</p>
             <small *ngIf="hospital.invalid && hospital.touched" class="error">Hospital Selection is Required.</small>
-            <select class=" rounded-lg" ngModel name="selected_hospital" #hospital="ngModel" required>
+            <select class=" rounded-lg h-6 md:w-3/5 lg:w-full" ngModel name="selected_hospital" #hospital="ngModel" required>
                 <option *ngFor="let hospital of hospitalArr" [value]="hospital" class="text-xs">{{hospital}}</option>
             </select>
         </div>
         <div class="3 grid grid-rows-2 gap-2 m-2 mt-16">
             <p class="font-bold text-white text-lg">Appointment Date</p>
             <small *ngIf="appointment.invalid && appointment.touched" class="error">Appointment Date is Required.</small>
-            <input type="date" class=" rounded-lg" ngModel name="selected_date" #appointment="ngModel" required />
+            <input type="date" class=" rounded-lg h-6 md:w-3/5 lg:w-full" ngModel name="selected_date" #appointment="ngModel" required />
+        </div>
+
+        <div class="1  grid grid-rows-2 gap-2 m-2 mt-10">
+            <p class="font-bold text-white text-lg">Opening Time</p>
+            <small *ngIf="timing.invalid && timing.touched" class="error">Opening Time is Required.</small>
+            <select class=" rounded-lg h-6 md:w-3/5 lg:w-full" ngModel name="selected_timing" #timing="ngModel" required>
+                <option *ngFor="let timing of timingArr" class="text-xs">{{timing}}</option>
+            </select>
+        </div>
+        <div class="3  grid grid-rows-2 gap-2 m-2 mt-10">
+            <p class="font-bold text-white text-lg">What is your reason for this visit?</p>
+            <textarea class=" rounded-lg text-xs" ngModel name="reason" #reason="ngModel" rows="4"></textarea>
         </div>
     </div>
 <button type="submit" [disabled]="step1.invalid" class="float-right mx-32 my-8 bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-blue-500 rounded">Next

@@ -6,21 +6,23 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { BookingComponent } from './booking/booking.component';
+// import { BookingComponent } from './booking/booking.component';
 import { NoPageComponent } from './no-page/no-page.component';
+import { CredentialModule } from './credential/credential.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    BookingComponent,
+    // BookingComponent,
     NoPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CredentialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
